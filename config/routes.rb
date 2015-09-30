@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   get("/loops/7", { :controller => "loops", :action => "num_7"} )
   get("/loops/8", { :controller => "loops", :action => "num_8"} )
   get("/loops/9", { :controller => "loops", :action => "num_9"} )
-  get("/loops/10", { :controller => "loops", :action => "num_10"} )
+  get("/loops/10", { :controller => "loops", :action => "num_10_display"} )
+  get("/loops/10_process", { :controller => "loops", :action => "num_10_process"} )
+
 end

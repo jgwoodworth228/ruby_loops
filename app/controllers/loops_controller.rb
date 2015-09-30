@@ -134,7 +134,7 @@ class LoopsController < ApplicationController
     render 'num_9'
   end
 
-  def num_10
+  def num_10_display
     #=== Problem ================================
     # Create a form that asks for a starting year
     # and an ending year and then prints all the
@@ -147,7 +147,29 @@ class LoopsController < ApplicationController
     # 2000, which were in fact leap years).
     #============================================
 
-    render 'num_10'
+    render 'num_10_display'
+  end
+
+
+ def num_10_process
+     #=== Problem ================================
+    # Create a form that asks for a starting year
+    # and an ending year and then prints all the
+    # leap years between them (and including them,
+    # if they are also leap years).
+    # Leap years are years divisible by 4 (like 1984
+    # 2004). However, years divisible by 100 are
+    # not leap years (such as 1800 and 1900) unless
+    # they are also divisible by 400 (such as 1600 and
+    # 2000, which were in fact leap years).
+    #============================================
+
+    @yearone=params["yearone"]
+
+    @yeartwo=params["yeartwo"]
+
+
+    render 'num_10_process'
   end
 
 

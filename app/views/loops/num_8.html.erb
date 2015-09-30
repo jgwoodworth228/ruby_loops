@@ -1,0 +1,32 @@
+
+<div class="container">
+<% @users.each do |user| %>
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="<%= user["image_url"]%>" alt="...">
+        </a>
+    </div>
+    <div class="media-body">
+        <h4 class="media-heading"><%= user["name"]%></h4>
+        <p> Email: <%= user["email"]%></p>
+        <p> Phone:  <%= user["phone"]%></p>
+    </div>
+  </div>
+<% end %>
+</div>
+
+
+
+<!--
+@users = [
+        {
+          "name" => "Frances Diaz",
+          "email" => "frances.diaz19@example.com",
+          "phone" => "(281)-123-1367",
+          "image_url" => "https://randomuser.me/api/portraits/med/women/33.jpg"
+        },
+
+
+ -->
+

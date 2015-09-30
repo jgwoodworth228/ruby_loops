@@ -1,0 +1,16 @@
+
+<h1>The leap years are:</h1>
+<!--
+<%= @yearone %>
+<%= @yeartwo %>
+ -->
+  <% workyr = @yearone.to_i %>
+
+    <% while workyr <= @yeartwo.to_i %>
+     <%  if workyr%4 == 0 %>
+         <% if workyr%100 != 0 || workyr%400 == 0 %>
+            <%= workyr %>
+       <%  end %>
+      <% end %>
+      <% workyr = workyr + 1 %>
+     <% end %>
